@@ -13,6 +13,7 @@ const userSchema = new Schema({
 
 const User = new mongoose.model("User", userSchema);
 
+// creates a user in the 'users' collection
 User.create({
   username: "cocoapuff"
 });
@@ -38,6 +39,7 @@ User.insertMany([
 ]);
 */
 
+// finds the users in the 'users' collection
 const userDwight = User.find({ username: "blabla" })
   .then(data => {
     //   fulfilled
